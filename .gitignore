@@ -129,5 +129,5 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
-dist
+#dist
 !dist/index.html
