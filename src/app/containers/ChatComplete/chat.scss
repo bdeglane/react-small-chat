@@ -1,0 +1,15 @@
+.chat {
+  margin: 1em;
+  padding: 1em;
+  background: #f2f2f2;
+  border-radius: 0.3em;
+  border: 1px solid silver;
+  width: 15rem;
+
+  .user-name {
+    text-align: right;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #b5b5b5;
+  }
+}

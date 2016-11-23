@@ -1,0 +1,17 @@
+header {
+  h1 {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: #0b97c4;
+  }
+}
+
+.chat-app {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  align-content: flex-start;
+  flex-direction: row;
+  flex-flow: row wrap;
+}

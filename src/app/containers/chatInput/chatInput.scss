@@ -1,0 +1,19 @@
+.chat-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: flex-start;
+
+  input {
+    border: none;
+    padding: 0.5em;
+    &[type=text] {
+      flex: 1 1 auto;
+    }
+    &[type=submit] {
+      background: #0b97c4;
+      color: white;
+      text-align: right;
+    }
+  }
+}
