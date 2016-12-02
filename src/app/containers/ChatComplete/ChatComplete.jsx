@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, PropTypes} from 'react';
 
 import ChatWindow from '../chatWindow/ChatWindow.jsx';
 import ChatInput from '../chatInput/ChatInput.jsx';
@@ -6,7 +6,6 @@ import ChatInput from '../chatInput/ChatInput.jsx';
 import './chatComplete.scss';
 
 export default class ChatComplete extends Component {
-
   /**
    *
    * @param message
@@ -27,3 +26,9 @@ export default class ChatComplete extends Component {
     )
   }
 }
+
+ChatComplete.propTypes = {
+  messages: PropTypes.array.isRequired,
+  user: PropTypes.string.isRequired,
+  addMessage: PropTypes.func.isRequired
+};
