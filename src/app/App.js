@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Chat from './Chat.jsx';
+import Chat from './pages/Chat.jsx';
 
 export default class App {
   start() {

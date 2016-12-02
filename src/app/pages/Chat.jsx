@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import ChatComplete from './containers/ChatComplete/ChatComplete.jsx';
+import ChatComplete from '../containers/ChatComplete/ChatComplete.jsx';
 
 import './chat.scss';
 
