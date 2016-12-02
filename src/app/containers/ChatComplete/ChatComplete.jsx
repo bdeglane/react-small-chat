@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import ChatWindow from '../chatWindow/ChatWindow.jsx';
 import ChatInput from '../chatInput/ChatInput.jsx';
 
-import './chat.scss';
+import './chatComplete.scss';
 
 export default class ChatComplete extends Component {
   render() {
