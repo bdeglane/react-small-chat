@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import classnames from 'classnames';
 
+import {ChatWindowItem} from './ChatWindowItem.jsx';
+
 import './chatWindow.scss';
 
 export default class ChatWindow extends Component {
@@ -31,14 +33,11 @@ export default class ChatWindow extends Component {
         {
           mine: item.user === this.props.user
         });
-      // new component
-      return (
-        <li key={id}
-            className={classes}>
-          <p className="user">{item.user}</p>
-          <p className="text">{item.message}</p>
-        </li>
-      );
+
+      return <ChatWindowItem key={id}
+                             user={item.user}
+                             message={item.message}
+                             classes={classes}/>;
     });
 
     return (
