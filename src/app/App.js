@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Chat from './pages/Chat.jsx';
+import ChatRedux from './ChatRedux.jsx';
 
 export default class App {
   start() {
     ReactDOM.render(
-      <Chat/>,
+      <ChatRedux/>,
       document.getElementById('app')
     );
   }
