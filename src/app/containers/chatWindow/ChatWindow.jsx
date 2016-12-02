@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import classnames from 'classnames';
 
@@ -9,9 +9,12 @@ export default class ChatWindow extends Component {
     super();
   }
 
+  componentDidMount() {
+    this.node = ReactDOM.findDOMNode(this);
+  }
+
   updateScroll() {
-    let node = ReactDOM.findDOMNode(this);
-    node.scrollTop = node.scrollHeight;
+    this.node.scrollTop = this.node.scrollHeight;
   }
 
   componentDidUpdate() {
@@ -20,7 +23,7 @@ export default class ChatWindow extends Component {
 
   render() {
     // item
-    let messages = this.props.messages.map((item, id)=> {
+    let messages = this.props.messages.map((item, id) => {
 
       // user messages justify to right
       let classes = classnames(
