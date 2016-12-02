@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 
 import './chatInput.scss';
 
@@ -12,6 +12,19 @@ export default class ChatInput extends Component {
     }
   }
 
+  /**
+   *
+   * @param event
+   */
+  onKeyDown(event) {
+    if (event.keyCode == 13)
+      this.addMessage();
+  }
+
+  /**
+   *
+   * @param event
+   */
   handleChange(event) {
     this.setState({message: event.target.value});
   }
@@ -19,7 +32,7 @@ export default class ChatInput extends Component {
   addMessage() {
     this.setState(
       {date: new Date()},
-      ()=> {
+      () => {
         this.props.addMessage(this.state);
         this.setState({message: ''});
       });
@@ -30,10 +43,11 @@ export default class ChatInput extends Component {
       <section className="chat-input">
         <input type="text"
                value={this.state.message}
-               onChange={(event)=> this.handleChange(event)}/>
+               onChange={event => this.handleChange(event)}
+               onKeyDown={event => this.onKeyDown(event)}/>
         <input type="submit"
                value="ok"
-               onClick={()=> this.addMessage()}/>
+               onClick={() => this.addMessage()}/>
       </section>
     )
   }
