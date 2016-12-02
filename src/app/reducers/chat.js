@@ -11,7 +11,13 @@ export const chat = (state = getDefaultState(), action) => {
 
     case ADD_MESSAGE:
       state = Object.assign({}, state, {
-        messages: [...state.messages, action.message]
+        messages: [
+          ...state.messages,
+          {
+            ...action.message,
+            date: new Date()
+          }
+        ],
       });
       break;
 

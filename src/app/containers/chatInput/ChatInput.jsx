@@ -7,8 +7,7 @@ export default class ChatInput extends Component {
     super(props);
     this.state = {
       message: '',
-      user: props.user,
-      date: ''
+      user: props.user
     }
   }
 
@@ -30,12 +29,8 @@ export default class ChatInput extends Component {
   }
 
   addMessage() {
-    this.setState(
-      {date: new Date()},
-      () => {
-        this.props.addMessage(this.state);
-        this.setState({message: ''});
-      });
+    this.props.addMessage(this.state);
+    this.setState({message: ''});
   }
 
   render() {
