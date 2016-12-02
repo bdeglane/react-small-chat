@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, PropTypes} from 'react';
 
 import ChatComplete from '../containers/ChatComplete/ChatComplete.jsx';
 
@@ -25,3 +25,8 @@ export default class Chat extends Component {
     );
   }
 }
+
+Chat.propTypes = {
+  messages: PropTypes.array.isRequired,
+  addMessage: PropTypes.func.isRequired
+};
