@@ -4,7 +4,8 @@
   "description": "small chat",
   "main": "index.js",
   "scripts": {
-    "test": ".\\node_modules\\.bin\\mocha --compilers js:babel-register,js:.\\test\\css-modules-compiler.js --recursive",
+    "test": ".\\node_modules\\.bin\\mocha --compilers js:babel-register,js:.\\test\\helpers\\css-modules-compiler.js --recursive",
+    "test:react": ".\\node_modules\\.bin\\mocha --compilers js:babel-register,js:.\\test\\helpers\\css-modules-compiler.js  .\\test\\helpers\\browser.js .\\test\\**\\*.test.js --recursive",
     "test:watch": "npm test --watch"
   },
   "author": "",
@@ -31,8 +32,11 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "css-modules-require-hook": "^4.0.5",
+    "enzyme": "^2.6.0",
     "gulp-mocha": "^3.0.1",
     "gulp-webserver": "^0.9.1",
-    "mocha": "^3.2.0"
+    "jsdom": "^9.8.3",
+    "mocha": "^3.2.0",
+    "react-addons-test-utils": "^15.4.1"
   }
 }
