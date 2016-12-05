@@ -1,6 +1,6 @@
 import {ADD_MESSAGE} from '../constants/chat';
 
-const getDefaultState = () => {
+export const getDefaultState = () => {
   return {
     messages: []
   }
