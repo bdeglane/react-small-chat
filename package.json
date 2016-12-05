@@ -4,8 +4,8 @@
   "description": "small chat",
   "main": "index.js",
   "scripts": {
-    "test": ".\\node_modules\\.bin\\mocha --compilers js:babel-register,js:.\\test\\helpers\\css-modules-compiler.js --recursive",
-    "test:react": ".\\node_modules\\.bin\\mocha --compilers js:babel-register,js:.\\test\\helpers\\css-modules-compiler.js  .\\test\\helpers\\browser.js .\\test\\**\\*.test.js --recursive",
+    "test:redux": ".\\node_modules\\.bin\\mocha --compilers js:babel-register .\\test\\redux.test.js",
+    "test:react": ".\\node_modules\\.bin\\mocha --compilers js:babel-register,js:.\\test\\helpers\\css-modules-compiler.js  .\\test\\helpers\\browser.js .\\test\\react.test.js",
     "test:watch": "npm test --watch"
   },
   "author": "",
