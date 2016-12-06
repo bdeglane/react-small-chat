@@ -31,7 +31,9 @@ gulp.task('webpack:build', function (callback) {
     }));
   productionConfig.plugins.push(
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production')
+      'process.env': {
+        NODE_ENV: JSON.stringify('production')
+      }
     }));
 
   webpack(productionConfig, function (err, stats) {
@@ -49,7 +51,9 @@ myDevConfig.devtool = 'sourcemap';
 myDevConfig.debug = true;
 myDevConfig.plugins.push(
   new webpack.DefinePlugin({
-    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
+    'process.env': {
+      NODE_ENV: JSON.stringify('development')
+    }
   }));
 
 // create a single instance of the compiler to allow caching

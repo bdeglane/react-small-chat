@@ -4,7 +4,9 @@
   "description": "small chat",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:redux": ".\\node_modules\\.bin\\mocha --compilers js:babel-register .\\test\\redux.test.js",
+    "test:react": ".\\node_modules\\.bin\\mocha --compilers js:babel-register,js:.\\test\\helpers\\css-modules-compiler.js  .\\test\\helpers\\browser.js .\\test\\react.test.js",
+    "test:watch": "npm test --watch"
   },
   "author": "",
   "license": "ISC",
@@ -22,10 +24,19 @@
     "node-sass": "^3.13.0",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
+    "react-redux": "^4.4.6",
+    "redux": "^3.6.0",
     "sass-loader": "^4.0.2",
     "webpack": "^1.13.3"
   },
   "devDependencies": {
-    "gulp-webserver": "^0.9.1"
+    "chai": "^3.5.0",
+    "css-modules-require-hook": "^4.0.5",
+    "enzyme": "^2.6.0",
+    "gulp-mocha": "^3.0.1",
+    "gulp-webserver": "^0.9.1",
+    "jsdom": "^9.8.3",
+    "mocha": "^3.2.0",
+    "react-addons-test-utils": "^15.4.1"
   }
 }

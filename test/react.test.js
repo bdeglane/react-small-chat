@@ -1,0 +1,1 @@
+import './containers/chatWindow/chatWindow.test';
