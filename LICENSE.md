@@ -1,0 +1,1 @@
+(c) Copyright 2016 Benoît Deglane, all rights reserved.
